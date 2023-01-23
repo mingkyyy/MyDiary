@@ -19,9 +19,8 @@ public class MemberRepositoryTest {
     public void member_save(){
 
         String name = "김민경";
-        String nickname = "밍키";
         String email = "test12@test.com";
-
+        String nickname = "mingkyy";
         memberRepository.save(Member.builder()
                         .name(name)
                         .nickname(nickname)

@@ -21,6 +21,9 @@ public class Member {
     private String name;
 
     @Column(nullable = false)
+    private String nickname;
+
+    @Column(nullable = false)
     private String email;
 
     @Enumerated(EnumType.STRING)
@@ -42,9 +45,10 @@ public class Member {
     private List<Comment> comments = new ArrayList<>();
 
     @Builder
-    public Member(String name, String email, MemberType memberType,
+    public Member(String name, String nickname ,String email, MemberType memberType,
                   OAuthType oAuthType, List<Post> posts, List<Report> reports, List<Good> goods, List<Comment> comments) {
         this.name = name;
+        this.nickname = nickname;
         this.email = email;
         this.memberType = memberType;
         this.oAuthType = oAuthType;
