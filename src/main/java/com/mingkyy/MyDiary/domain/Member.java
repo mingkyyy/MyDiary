@@ -58,9 +58,10 @@ public class Member {
         this.comments = comments;
     }
 
-    public Member update(String name, String email){
+    public Member update(String name, String email, String nickname){
         this. name = name;
         this.email = email;
+        this.nickname = nickname;
 
         return this;
     }

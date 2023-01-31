@@ -23,8 +23,5 @@ public class MemberOAuth2User extends DefaultOAuth2User {
         this.member = member;
     }
 
-    @Override
-    public String getName() {
-        return member.getEmail();
-    }
+
 }
