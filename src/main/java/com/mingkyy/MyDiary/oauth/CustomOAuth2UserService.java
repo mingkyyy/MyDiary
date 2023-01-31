@@ -19,7 +19,6 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 public class CustomOAuth2UserService implements OAuth2UserService{
     private final MemberRepository memberRepository;
-    private final HttpSession httpSession;
 
 
     @Override
@@ -37,7 +36,6 @@ public class CustomOAuth2UserService implements OAuth2UserService{
         );
 
         Member member = saveOrUpdate(attributes);
-        httpSession.setAttribute("user", new SessionUser(member));
 
         return new MemberOAuth2User(member, attributes);
     }
